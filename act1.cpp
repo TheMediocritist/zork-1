@@ -121,9 +121,10 @@ bool robber(const HackP &hack)
                     if (still->ocan() == hobj)
                     {
                         insert_object(hobj, rm);
-                        tell("Someone carrying a large bag is casually leaning against one of the\n"
-                            "walls here.  He does not speak, but it is clear from his aspect that\n"
-                            "the bag will be taken only over his dead body.", long_tell1);
+                        tell("Someone carrying a large bag is casually leaning\n"
+			     "against one of the walls here.  He does not speak,\n"
+			     "but it is clear from his aspect that the bag will\n"
+			     "be taken only over his dead body.", long_tell1);
                         hack->hflag(true);
                         return true;
                     }
@@ -136,9 +137,11 @@ bool robber(const HackP &hack)
                     {
                         if (!winning(hobj, win))
                         {
-                            tell("Your opponent, determining discretion to be the better part of\n"
-                                "valor, decides to terminate this little contretemps.  With a rueful\n"
-                                "nod of his head, he steps backward into the gloom and disappears.", long_tell1);
+			    tell("Your opponent, determining discretion to be the\n"
+				"better part of valor, decides to terminate this\n"
+				"little contretemps.  With a rueful nod of his\n" 
+				"head, he steps backward into the gloom and\n"
+				"disappears.", long_tell1);
                             remove_object(hobj);
                             trz(hobj, fightbit);
                             snarf_object(hobj, still);
@@ -148,7 +151,8 @@ bool robber(const HackP &hack)
                     }
                     if (!done && hereq && prob(30))
                     {
-                        tell("The holder of the large bag just left, looking disgusted.\n"
+			tell("The holder of the large bag just left, looking\n"
+			    "disgusted.\n"
                             "Fortunately, he took nothing.");
                         remove_object(hobj);
                         snarf_object(hobj, still);
@@ -171,9 +175,10 @@ bool robber(const HackP &hack)
                         hack->hflag(true);
                         if (objt != hh && !hereq)
                         {
-                            tell("A seedy-looking individual with a large bag just wandered through\n"
-                                "the room.  On the way through, he quietly abstracted all valuables\n"
-                                "from the room and from your possession, mumbling something about\n"
+			    tell("A seedy-looking individual with a large bag just\n"
+				"wandered through the room.  On the way through, he\n" 
+				"quietly abstracted all valuables from the room and\n"
+				"from your possession, mumbling something about\n"
                                 "\"Doing unto others before...\"", long_tell1);
                         }
                         else if (hereq)
@@ -181,21 +186,23 @@ bool robber(const HackP &hack)
                             snarf_object(hobj, still);
                             if (objt != hh)
                             {
-                                tell("The other occupant just left, still carrying his large bag.  You may\n"
-                                    "not have noticed that he robbed you blind first.");
+				tell("The other occupant just left, still carrying his\n"
+				    "large bag.  You may not have noticed that he\n"
+				    "robbed you blind first.");
                             }
                             else
                             {
-                                tell("The other occupant (he of the large bag), finding nothing of value,\n"
-                                    "left disgusted.");
+				tell("The other occupant (he of the large bag), finding\n"
+				    "nothing of value, left disgusted.");
                             }
                             remove_object(hobj);
                             hereq = nullptr;
                         }
                         else
                         {
-                            tell("A 'lean and hungry' gentleman just wandered through, carrying a\n"
-                                "large bag.  Finding nothing of value, he left disgruntled.");
+			    tell("A 'lean and hungry' gentleman just wandered\n"
+				"through, carrying a large bag.  Finding nothing of\n" 
+				"value, he left disgruntled.");
                         }
                     }
                 }
@@ -214,13 +221,14 @@ bool robber(const HackP &hack)
                         }
                         if (objt == hh)
                         {
-                            tell("The other occupant (he of the large bag), finding nothing of value,\n"
-                                "left disgusted.");
+                            tell("The other occupant (he of the large bag), finding\n"
+				"nothing of value, left disgusted.");
                         }
                         else
                         {
-                            tell("The other occupant just left, still carrying his large bag.  You may\n"
-                                "not have noticed that he robbed you blind first.");
+                            tell("The other occupant just left, still carrying his\n"
+				"large bag.  You may not have noticed that he\n"
+				"robbed you blind first.");
                         }
                         remove_object(hobj);
                         hereq = nullptr;
@@ -255,8 +263,9 @@ bool robber(const HackP &hack)
                 {
                     if (trnn(x, takebit) && trnn(x, ovison) && prob(40))
                     {
-                        tell("You hear, off in the distance, someone saying \"My, I wonder what\n"
-                            "this fine " + x->odesc2() + " is doing here.\"", 3);
+			tell("You hear, off in the distance, someone saying\n"
+			    "\"My, I wonder what this fine " + x->odesc2() + "\n"
+			    "is doing here.\"", 3);
                         tell("", 1);
                         if (prob(60, 80))
                         {
@@ -340,8 +349,8 @@ bool robber(const HackP &hack)
                 insert_object(x, rm);
                 if (rm == wroom)
                 {
-                    tell("The robber, rummaging through his bag, dropped a few items he found\n"
-                        "valueless.");
+		    tell("The robber, rummaging through his bag, dropped a\n" 
+			"few items he found valueless.");
                 }
             }
         }
@@ -427,8 +436,9 @@ bool sinbad()
         memq(c, here->robjs()))
     {
         flags.set(cyclops_flag);
-        tell("The cyclops, hearing the name of his father's deadly nemesis, flees the room\n"
-            "by knocking down the wall on the north of the room.");
+	tell("The cyclops, hearing the name of his father's\n"
+	    "deadly nemesis, flees the room by knocking down\n" 
+	    "the wall on the north of the room.");
         flags.set(magic_flag);
         trz(c, fightbit);
         remove_object(c);
@@ -470,7 +480,8 @@ bool pour_on()
         }
         else
         {
-            tell("The water spills over the " + prsi()->odesc2() + " and to the floor where it evaporates.", 1);
+	    tell("The water spills over the " + prsi()->odesc2() + "\n"
+		"and to the floor where it evaporates.", 1);
             remove_object(prso);
         }
     }
@@ -489,7 +500,7 @@ bool prayer()
         room_desc();
     }
     else
-    {
+    {   
         tell("If you pray enough, your prayers may be answered.");
     }
     return true;
@@ -586,7 +597,8 @@ bool killer(std::string_view str)
         }
         else
         {
-            tell("I've known strange people, but fighting a " + prsoo->odesc2() + "?", 1);
+            tell("I've known strange people, but fighting\n" 
+		"a " + prsoo->odesc2() + "?", 1);
         }
     }
     else if (empty(prsi()))
@@ -643,8 +655,8 @@ bool thief_in_treasure(ObjectP hobj)
     const ObjectP &chali = sfind_obj("CHALI");
     if (length(here->robjs()) != 2)
     {
-        tell("The thief gestures mysteriously, and the treasures in the room\n"
-            "suddenly vanish.");
+        tell("The thief gestures mysteriously, and the treasures\n
+	    "in the room suddenly vanish.");
 
         for (const ObjectP &x : here->robjs())
         {
@@ -689,7 +701,8 @@ bool tie_up()
         ObjectP prso = ::prso();
         if (trnn(prso, villain))
         {
-            tell("The " + prso->odesc2() + " struggles and you cannot tie him up.");
+            tell("The " + prso->odesc2() + " struggles and you\n"
+		"cannot tie him up.");
         }
         else
         {
@@ -729,15 +742,16 @@ bool brush()
         ObjectP prsi = ::prsi();
         const AdvP &winner = *::winner;
         if (prsi == sfind_obj("PUTTY") && memq(prsi, winner->aobjs()))
-        {
-            jigs_up("Well, you seem to have been brushing your teeth with some sort of\n"
-                "glue. As a result, your mouth gets glued together (with your nose)\n"
-                "and you die of respiratory failure.");
+        {      
+            jigs_up("Well, you seem to have been brushing your teeth\n"
+		    "with some sort of glue. As a result, your mouth\n"
+		    "gets glued together (with your nose) and you die\n" 
+		    "of respiratory failure.");
         }
         else if (empty(prsi))
         {
-            tell("Dental hygiene is highly recommended, but I'm not sure what you want\n"
-                "to brush them with.");
+            tell("Dental hygiene is highly recommended, but I'm not\n"
+		"sure what you want to brush them with.");
         }
         else
         {
@@ -830,7 +844,8 @@ bool hello()
         }
         else
         {
-            tell("I think that only schizophrenics say 'Hello' to a " + prso->odesc2() + ".", 1);
+            tell("I think that only schizophrenics say 'Hello' to a\n" 
+		 + prso->odesc2() + ".", 1);
         }
     }
     else
@@ -1054,7 +1069,7 @@ bool eat()
     {
         if (prsoo->oglobal().has_value() || (nobj = prsoo->ocan()) && memq(nobj, aobjs) && trnn(nobj, openbit))
         {
-            tell("Thank you very much.  I was rather thirsty (from all this talking\nprobably).");
+            tell("Thank you very much.  I was rather thirsty (from\nall this talking probably).");
             if (nobj)
             {
                 remove_from(nobj, prsoo);
@@ -1067,7 +1082,8 @@ bool eat()
     }
     else if (!(eat || drink))
     {
-        tell("I don't think the " + prsoo->odesc2() + " would agree with you.");
+        tell("I don't think the " + prsoo->odesc2() + "\n"
+	     "would agree with you.");
     }
     else
     {
@@ -1092,7 +1108,8 @@ bool melter()
     else
     {
         ObjectP prso = ::prso();
-        rv = tell("I'm not sure that a " + prso->odesc2() + " can be melted.", 1);
+        rv = tell("I'm not sure that a " + prso->odesc2() + " can\n"
+		  "be melted.", 1);
     }
     return rv;
 }
@@ -1119,7 +1136,8 @@ bool munger()
         }
         else
         {
-            tell("Trying to destroy a " + prsoo->odesc2() + " with your bare hands is suicidal.", 1);
+            tell("Trying to destroy a " + prsoo->odesc2() + "\n"
+		 "with your bare hands is suicidal.", 1);
         }
     }
     else
@@ -1140,7 +1158,8 @@ bool look_inside()
         {
             if (trnn(prsoo, openbit))
             {
-                tell("The " + prsoo->odesc2() + " is open, but I can't tell what's beyond it.");
+                tell("The " + prsoo->odesc2() + " is open, but I\n"
+		     "can't tell what's beyond it.");
             }
             else
             {
@@ -1167,7 +1186,7 @@ bool look_inside()
         }
         else
         {
-            tell("I don't know how to look inside a " + prsoo->odesc2() + ".");
+            tell("I don't know how to look inside a\n" + prsoo->odesc2() + ".");
         }
     }
     return true;
@@ -1271,7 +1290,8 @@ namespace exit_funcs
         }
         else
         {
-            tell("Unfortunately, it is impossible to tell directions in here.");
+            tell("Unfortunately, it is impossible to tell directions\n"
+		"in here.");
             rm = carousel_out();
         }
         return rm;
@@ -1294,8 +1314,9 @@ namespace room_funcs
             rv = true;
             if (flg = (hobj->oroom() != here))
             {
-                tell("You hear a scream of anguish as you violate the robber's hideaway.\n"
-                    "Using passages unknown to you, he rushes to its defense.");
+                tell("You hear a scream of anguish as you violate the\n"
+		     "robber's hideaway. Using passages unknown to you,\n"
+		     "he rushes to its defense.");
                 if (hobj->oroom())
                     remove_object(hobj);
                 tro(hobj, fightbit);
@@ -1343,7 +1364,8 @@ namespace room_funcs
             tell(mirr_desc, long_tell1);
             if (flags[mirror_mung])
             {
-                tell("Unfortunately, the mirror has been destroyed by your recklessness.");
+                tell("Unfortunately, the mirror has been destroyed by\n"
+		     "your recklessness.");
             }
             rv = true;
         }
@@ -1364,7 +1386,7 @@ namespace room_funcs
                 tell("The water level is now " + drownings[lev / 2], 1);
             }
             if (lev > 16)
-            {
+            {     
                 mung_room(mnt, "The room is full of water and cannot be entered.");
                 clock_int(mntin, 0);
                 here && jigs_up("I'm afraid you have done drowned yourself.");
@@ -1388,8 +1410,9 @@ namespace room_funcs
             {
                 tell(htide_desc, long_tell1);
             }
-            tell("There is a control panel here.  There is a large metal bolt on the\n"
-                "panel. Above the bolt is a small green plastic bubble.", long_tell1);
+		tell("There is a control panel here.  There is a large\n"
+		     "metal bolt on the panel. Above the bolt is a small\n"
+		     "green plastic bubble.", long_tell1);
             if (flags[gate_flag])
             {
                 tell("The green bubble is glowing.", 1);
@@ -1406,13 +1429,14 @@ namespace room_funcs
         {
             if (flags[low_tide])
             {
-                tell("You are in a large cavernous room, the south of which was formerly\n"
-                    "a reservoir.");
+                tell("You are in a large cavernous room, the south of\n"
+		     "which was formerly a reservoir.");
                 tell(resdesc, long_tell1);
             }
             else
             {
-                tell("You are in a large cavernous room, north of a large reservoir.");
+                tell("You are in a large cavernous room, north of a\n"
+		     "large reservoir.");
             }
             tell("There is a tunnel leaving the room to the north.");
             rv = true;
@@ -1427,8 +1451,9 @@ namespace room_funcs
         {
             if (flags[low_tide])
             {
-                tell("You are on what used to be a large reservoir, but which is now a large\n"
-                    "mud pile.  There are 'shores' to the north and south.", long_tell1);
+                tell("You are on what used to be a large reservoir, but\n"
+		     "which is now a large mud pile.  There are 'shores'\n" 
+		     "to the north and south.", long_tell1);
             }
             else
             {
@@ -1446,15 +1471,17 @@ namespace room_funcs
         {
             if (flags[low_tide])
             {
-                tell("You are in a long room, to the north of which was formerly a reservoir.");
+                tell("You are in a long room, to the north of which was\n"
+		     "formerly a reservoir.");
                 tell(resdesc, long_tell1);
             }
             else
             {
-                tell("You are in a long room on the south shore of a large reservoir.");
+                tell("You are in a long room on the south shore of a\n"
+		     "large reservoir.");
             }
-            tell("There is a western exit, a passageway south, and a steep pathway\n"
-                "climbing up along the edge of a cliff.", long_tell1);
+            tell("There is a western exit, a passageway south, and a\n"
+		 "steep pathway climbing up along the edge of a cliff.", long_tell1);
             rv = true;
         }
         return rv;
@@ -1526,14 +1553,17 @@ namespace room_funcs
         int wrath = cyclowrath;
         if (verbq("LOOK"))
         {
-            tell("This room has an exit on the west side, and a staircase leading up.");
+            tell("This room has an exit on the west side, and a\n"
+		 "staircase leading up.");
             if (flags[magic_flag])
             {
-                tell("The north wall, previously solid, now has a cyclops-sized hole in it.");
+                tell("The north wall, previously solid, now has a\n"
+		     "cyclops-sized hole in it.");
             }
             else if (flags[cyclops_flag] && trnn(sfind_obj("CYCLO"), sleepbit))
             {
-                tell("The cyclops is sleeping blissfully at the foot of the stairs.");
+                tell("The cyclops is sleeping blissfully at the foot of \n"
+		     "the stairs.");
             }
             else if (wrath == 0)
             {
@@ -1545,8 +1575,9 @@ namespace room_funcs
             }
             else if (wrath < 0)
             {
-                tell("The cyclops, having eaten the hot peppers, appears to be gasping.\n"
-                    "His enflamed tongue protrudes from his man-sized mouth.");
+                tell("The cyclops, having eaten the hot peppers, appears\n"
+		     "to be gasping. His enflamed tongue protrudes from\n"
+		     "his man-sized mouth.");
             }
         }
         else if (verbq("GO-IN"))
@@ -1566,8 +1597,9 @@ namespace room_funcs
             jigs_up(spindizzy);
         }
         else if (verbq("LOOK"))
-        {
-            tell("You are in a circular room with passages off in eight directions.");
+        {   tell("01234567890123456789012345678901234567890123456789\n"
+            tell("You are in a circular room with passages off in\n"
+		 "eight directions.");
             if (!flags[carousel_flip])
                 tell("Your compass needle spins wildly, and you can't get your bearings.");
         }
