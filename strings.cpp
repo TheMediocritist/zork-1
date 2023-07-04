@@ -8,53 +8,53 @@ const tofmsgs &cyclops_melee()
 {
     static const tofmsgs cm =
     {
-        {   "The Cyclops misses, but the backwash almost knocks you over.",
+        {   "The Cyclops misses, but the backwash almost knocks\nyou over.",
             "The Cyclops rushes you, but runs into the wall.",
-            "The Cyclops trips over his feet trying to get at you.",
-            "The Cyclops unleashes a roundhouse punch, but you have time to dodge."
+            "The Cyclops trips over his feet trying to get at\nyou.",
+            "The Cyclops unleashes a roundhouse punch, but you\nhave time to dodge."
         },
         {
             "The Cyclops knocks you unconscious.",
-            "The Cyclops sends you crashing to the floor, unconscious."
+            "The Cyclops sends you crashing to the floor,\nunconscious."
         },
         {
-            "The Cyclops raises his arms and crushes your skull.",
-            "The Cyclops has just essentially ripped you to shreds.",
+            "The Cyclops raises his arms and crushes your\nskull.",
+            "The Cyclops has just essentially ripped you to\nshreds.",
             "The Cyclops decks you.  In fact, you are dead.",
             "The Cyclops breaks your neck with a massive smash.",
         },
         {
             "A quick punch, but it was only a glancing blow.",
-            "The Cyclops grabs but you twist free, leaving part of your cloak.",
+            "The Cyclops grabs but you twist free, leaving part\nof your cloak.",
             "A glancing blow from the Cyclops' fist.",
-            "The Cyclops chops at you with the side of his hand, and it connects.\nbut not solidly."
+            "The Cyclops chops at you with the side of his\nhand, and it connects, but not solidly."
         },
         {
             "The Cyclops gets a good grip and breaks your arm.",
-            "The monster smashes his huge fist into your chest, breaking several\nribs.",
-            "The Cyclops almost knocks the wind out of you with a quick punch.",
+            "The monster smashes his huge fist into your chest,\nbreaking several\nribs.",
+            "The Cyclops almost knocks the wind out of you with\na quick punch.",
             "A flying drop kick breaks your jaw.",
-            "The Cyclops breaks your leg with a staggering blow."
+            "The Cyclops breaks your leg with a staggering\nblow."
         },
         {
             "The Cyclops knocks you silly, and you reel back.",
-            "The Cyclops lands a punch that knocks the wind out of you.",
-            "Heedless of your weapons, the Cyclops tosses you against the rock\nwall of the room.",
-            "The Cyclops grabs you, and almost strangles you before you wiggle\nfree, breathless."
+            "The Cyclops lands a punch that knocks the wind out\nof you.",
+            "Heedless of your weapons, the Cyclops tosses you\nagainst the rock wall of the room.",
+            "The Cyclops grabs you, and almost strangles you\nbefore you wiggle free, breathless."
         },
         {
-            "The Cyclops grabs you by the arm, and you drop your " W ".",
+            "The Cyclops grabs you by the arm, and you drop\nyour " W ".",
             "The Cyclops kicks your " W " out of your hand.",
-            "The Cyclops grabs your " W ", tastes it, and throws it to the\nground in disgust.",
-            "The monster grabs you on the wrist, squeezes, and you drop your\n" W " in pain."
+            "The Cyclops grabs your " W ", tastes it, and\nthrows it to the ground in disgust.",
+            "The monster grabs you on the wrist, squeezes, and\nyou drop your " W " in pain."
         },
         {
-            "The Cyclops is so excited by his success that he neglects to kill\nyou.",
-            "The Cyclops, momentarily overcome by remorse, holds back.",
-            "The Cyclops seems unable to decide whether to broil or stew his\ndinner."
+            "The Cyclops is so excited by his success that he\nneglects to kill you.",
+            "The Cyclops, momentarily overcome by remorse,\nholds back.",
+            "The Cyclops seems unable to decide whether to\nbroil or stew his dinner."
         },
         {
-            "The Cyclops, no sportsman, dispatches his unconscious victim."
+            "The Cyclops, no sportsman, dispatches his\nunconscious victim."
         }
     };
     return cm;
@@ -65,11 +65,14 @@ const tofmsgs &knife_melee()
     {
         {
             "Your stab misses the " D " by an inch.",
-            "A good slash, but it misses the " D " by a mile.",
-            "You charge, but the " D " jumps nimbly aside.",
-            "A quick stroke, but the " D " is on guard.",
-            "A good stroke, but it's too slow, the " D " dodges."
+            "A good slash, but it misses the " D " by\na mile.",
+            "You charge, but the " D " jumps nimbly\naside.",
+            "A quick stroke, but the " D " is\non guard.",
+            "A good stroke, but it's too slow, the " D "\ndodges."
         },
+
+//!! UP TO HERE!! 
+
         {
             "The haft of your knife knocks out the " D ".",
             "The " D " drops to the floor, unconscious.",
