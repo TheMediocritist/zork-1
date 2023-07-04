@@ -1664,7 +1664,7 @@ namespace room_funcs
         if (verbq("LOOK"))
         {
             std::string s = "You are behind the white house.  In one corner of\n"
-            the house there is a small window which is\n";
+                "the house there is a small window which is\n";
             s += trnn(sfind_obj("WINDO"), openbit) ? "open." : "slightly ajar.";
             tell(s);
             handled = true;
