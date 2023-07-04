@@ -2919,8 +2919,8 @@ namespace obj_funcs
             }
             else
             {
-                rv = tell("With a great effort, the rug is moved to one side of the room.\n"
-                    "With the rug moved, the dusty cover of a closed trap-door appears.", long_tell1);
+                rv = tell("With a great effort, the rug is moved to one side\nof the room.\n"
+                    "With the rug moved, the dusty cover of a closed\ntrap-door appears.", long_tell1);
                 tro(sfind_obj("DOOR"), ovison);
                 flags[rug_moved] = true;
             }
@@ -3246,8 +3246,9 @@ namespace obj_funcs
         bool rv = verbq("TAKE");
         if (rv)
         {
-            tell("The trophy case is securely fastened to the wall (perhaps to foil any\n"
-                "attempt by robbers to remove it).");
+            tell("The trophy case is securely fastened to the wall\n"
+                "(perhaps to foil any attempt by robbers to remove\n"
+                "it).");
         }
         return rv;
     }
@@ -3258,7 +3259,7 @@ namespace obj_funcs
         bool rv = false;
         if (verbq( "OPEN", "CLOSE" ) && rm == sfind_room("LROOM"))
         {
-            rv = open_close(prso(), "The door reluctantly opens to reveal a rickety staircase descending\ninto darkness.",
+            rv = open_close(prso(), "The door reluctantly opens to reveal a rickety\nstaircase descending into darkness.",
                 "The door swings shut and closes.");
         }
         else if (rm == sfind_room("CELLA"))
