@@ -2,7 +2,7 @@
 #include <array>
 #include <string>
 #include <string_view>
-constexpr std::string_view msg_string = "Muddle 105 Version/Please report strange occurrences.";
+constexpr std::string_view msg_string = "Muddle 105 Version/nPlease report strange occurrences.\n";
 constexpr std::array<std::string_view, 20> device_table = { "A", "AI", "D", "DM", "C", "ML", "H", "AI", "L", "AI", "M", "ML", "N", "MC", "P", "ML", "U", "MC", "Z", "ML"};
 constexpr std::string_view flushstr1 = "There appears before you a threatening figure clad\nall over in heavy black armor.  His legs seem like\nthe massive trunk of the oak tree. His broad\nshoulders and helmeted head loom high over your\nown puny frame and you realize that his powerful\narms could easily crush the very life from your\nbody.  There hangs from his belt a veritable\narsenal of deadly weapons: sword, mace, ball and\nchain, dagger, lance, and trident. He speaks with\na commanding voice:\n\n		     \"YOU SHALL NOT PASS \"\n\nAs he grabs you by the neck all grows dim about\nyou.";
 constexpr std::string_view flushstr2 = "Suddenly, a sinister, wraithlike figure appears\nbefore you, seeming to float in the air.  He glows\nwith an eldritch light.  In a barely naudible\n voice he says, \"Begone, defiler!  Your presence upsets the very\nbalance of the System itself!\"  With a sinister\nchuckle, he raises his oaken staff, taps you on\nthe head, and fades into the gloom.  In his place\nappears a tastefully lettered sign reading:\n\n			DUNGEON CLOSED\n\nAt that instant, you disappear, and all your\nbelongings clatter to the ground.\n";
@@ -17,30 +17,30 @@ constexpr std::string_view losstr = "I can't do everything, because I ran out of
 constexpr std::string_view backstr = "He who puts his hand to the plow and looks back is\nnot fit for the kingdom of winners.  In any case,\n\"back\" doesn't work.";
 constexpr std::string_view kitch_desc = "You are in the kitchen of the white house.  A \ntable seems to have been used recently for the\npreparation of food.  A passage leads to the west\nand a dark staircase can be seen leading upward.\nTo the east is a small window which is ";
 constexpr std::string_view lroom_desc1 = "You are in the living room.  There is a door to\nthe east.  To the west is a cyclops-shaped hole in\nan old wooden door, above which is some strange\ngothic lettering ";
-constexpr std::string_view lroom_desc2 = "You are in the living room.  There is a door to\nthe east, a wooden door with strange gothic\nlettering to the west, which appears to be\nnailed shut, ";
+constexpr std::string_view lroom_desc2 = "You are in the living room.  There is a door to\nthe east, a wooden door with strange gothic\nlettering to the west, which appears to be nailed\nshut, ";
 constexpr std::string_view ltide_desc = "It appears that the dam has been opened since the\nwater level behind it is low and the sluice gate\nhas been opened.  Water is rushing downstream\nthrough the gates.";
 constexpr std::string_view htide_desc = "The sluice gates on the dam are closed.  Behind\nthe dam, there can be seen a wide lake.  A small\nstream is formed by the runoff from the lake.";
 constexpr std::string_view reser_desc = "You are on the reservoir.  Beaches can be seen\nnorth and south. Upstream a small stream enters\nthe reservoir through a narrow cleft in the rocks.\nThe dam can be seen downstream.";
+constexpr std::string_view dam_desc = "You are standing on the top of the Flood Control\nDam #3, which was quite a tourist attraction in\ntimes far distant.  There are paths to the north,\nsouth, east, and down.";
+constexpr std::string_view cella_desc = "You are in a dark and damp cellar with a narrow\npassageway leading east, and a crawlway to the\nsouth.  On the west is the bottom of a steep metal\nramp which is unclimbable.";
+constexpr std::string_view mirr_desc = "You are in a large square room with tall ceilings.\nOn the south wall is an enormous mirror which\nfills the entire wall.  There are exits on the\nother three sides of the room.";
+constexpr std::string_view trolldesc = "A nasty-looking troll, brandishing a bloody axe,\nblocks all passages out of the room.";
+constexpr std::string_view trollout = "An unconscious troll is sprawled on the floor.\nAll passages out of the room are open.";
+constexpr std::string_view cyclokill = "The cyclops, tired of all of your games and\ntrickery, eats you.  The cyclops says 'Mmm.  Just\nlike mom used to make 'em.'";
+constexpr std::string_view cyclofood = "The cyclops says 'Mmm Mmm.  I love hot peppers!\nBut oh, could I use a drink.  Perhaps I could\ndrink the blood of that thing'.  From the gleam in\nhis eye, it could be surmised that you are 'that\nthing'.";
+constexpr std::string_view cyclolook = "A cyclops, who looks prepared to eat horses (much\nless mere adventurers), blocks the staircase.\nFrom his state of health, and the bloodstains on\nthe walls, you gather that he is not very\nfriendly, though he likes people.";
+constexpr std::string_view cycloeye = "The cyclops is standing in the corner, eyeing you\nclosely.  I don't think he likes you very much.\nHe looks extremely hungry even for a cyclops.";
+constexpr std::string_view robber_c_desc = "There is a suspicious-looking individual, holding\na bag, leaning against one wall.  He is armed with\na vicious-looking stiletto.";
+constexpr std::string_view robber_u_desc = "There is a suspicious-looking individual lying\nunconscious on the ground.  His bag and stiletto\nseem to have vanished.";
+constexpr std::string_view resdesc = "However, with the water level lowered, there is\nmerely a wide stream running through the center of\nthe room.";
+constexpr std::string_view gladesc = "This is a large room, with giant icicles hanging\nfrom the walls\nand ceiling.  There are passages\nto the north and east.";
+constexpr std::string_view glacier_win = "The torch hits the glacier and explodes into a\ngreat ball of flame, devouring the glacier.  The\nwater from the melting glacier rushes downstream,\ncarrying the torch with it.  In the place of the\nglacier, there is a passageway leading west.";
+constexpr std::array<std::string_view, 6> yuks = { "A valiant attempt.", "You can't be serious.", "Not a prayer.", "Not likely.", "An interesting idea...", "What a concept!"};
+constexpr std::string_view rusty_knife_str = "As the knife approaches its victim, your mind is\nsubmerged by an overmastering will.  Slowly, your\nhand turns, until the rusty blade is an inch from\nyour neck.  The knife seems to sing as it savagely\nslits your throat.";
+constexpr std::string_view cursestr = "A ghost appears in the room and is appalled at\nyour having desecrated the remains of a fellow\nadventurer.  He casts a curse on all of your\nvaluables and orders them banished to the Land of\nthe Living Dead.  The ghost leaves, muttering\nobscenities.";
 
 //!!UP TO HERE!!
 
-constexpr std::string_view dam_desc = "You are standing on the top of the Flood Control Dam #3, which was\nquite a tourist attraction in times far distant.  There are paths to\nthe north, south, east, and down.";
-constexpr std::string_view cella_desc = "You are in a dark and damp cellar with a narrow passageway leading\neast, and a crawlway to the south.  On the west is the bottom of a\nsteep metal ramp which is unclimbable.";
-constexpr std::string_view mirr_desc = "You are in a large square room with tall ceilings.  On the south wall\nis an enormous mirror which fills the entire wall.  There are exits\non the other three sides of the room.";
-constexpr std::string_view trolldesc = "A nasty-looking troll, brandishing a bloody axe, blocks all passages\nout of the room.";
-constexpr std::string_view trollout = "An unconscious troll is sprawled on the floor.  All passages out of\nthe room are open.";
-constexpr std::string_view cyclokill = "The cyclops, tired of all of your games and trickery, eats you.\nThe cyclops says 'Mmm.  Just like mom used to make 'em.'";
-constexpr std::string_view cyclofood = "The cyclops says 'Mmm Mmm.  I love hot peppers!  But oh, could I use\na drink.  Perhaps I could drink the blood of that thing'.  From the\ngleam in his eye, it could be surmised that you are 'that thing'.";
-constexpr std::string_view cyclolook = "A cyclops, who looks prepared to eat horses (much less mere\nadventurers), blocks the staircase.  From his state of health, and\nthe bloodstains on the walls, you gather that he is not very\nfriendly, though he likes people.";
-constexpr std::string_view cycloeye = "The cyclops is standing in the corner, eyeing you closely.  I don't\nthink he likes you very much.  He looks extremely hungry even for a\ncyclops.";
-constexpr std::string_view robber_c_desc = "There is a suspicious-looking individual, holding a bag, leaning\nagainst one wall.  He is armed with a vicious-looking stiletto.";
-constexpr std::string_view robber_u_desc = "There is a suspicious-looking individual lying unconscious on the\nground.  His bag and stiletto seem to have vanished.";
-constexpr std::string_view resdesc = "However, with the water level lowered, there is merely a wide stream\nrunning through the center of the room.";
-constexpr std::string_view gladesc = "This is a large room, with giant icicles hanging from the walls\nand ceiling.  There are passages to the north and east.";
-constexpr std::string_view glacier_win = "The torch hits the glacier and explodes into a great ball of flame,\ndevouring the glacier.  The water from the melting glacier rushes\ndownstream, carrying the torch with it.  In the place of the glacier,\nthere is a passageway leading west.";
-constexpr std::array<std::string_view, 6> yuks = { "A valiant attempt.", "You can't be serious.", "Not a prayer.", "Not likely.", "An interesting idea...", "What a concept!"};
-constexpr std::string_view rusty_knife_str = "As the knife approaches its victim, your mind is submerged by an\novermastering will.  Slowly, your hand turns, until the rusty blade\nis an inch from your neck.  The knife seems to sing as it savagely\nslits your throat.";
-constexpr std::string_view cursestr = "A ghost appears in the room and is appalled at your having\ndesecrated the remains of a fellow adventurer.  He casts a curse\non all of your valuables and orders them banished to the Land of\nthe Living Dead.  The ghost leaves, muttering obscenities.";
 constexpr std::string_view torch_desc = "This is a large room with a prominent doorway leading to a down\nstaircase. To the west is a narrow twisting tunnel, covered with\na thin layer of dust.  Above you is a large dome painted with scenes\ndepicting elfin hacking rites. Up around the edge of the dome\n(20 feet up) is a wooden railing. In the center of the room there\nis a white marble pedestal.";
 constexpr std::string_view dome_desc = "You are at the periphery of a large dome, which forms the ceiling\nof another room below.  Protecting you from a precipitous drop is a\nwooden railing which circles the dome.";
 constexpr std::string_view hellgate = "You are outside a large gateway, on which is inscribed \n	\"Abandon every hope, all ye who enter here.\"  \nThe gate is open; through it you can see a desolation, with a pile of\nmangled corpses in one corner.  Thousands of voices, lamenting some\nhideous fate, can be heard.";

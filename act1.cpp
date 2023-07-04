@@ -1158,8 +1158,7 @@ bool look_inside()
         {
             if (trnn(prsoo, openbit))
             {
-                tell("The " + prsoo->odesc2() + " is open, but I\n"
-		     "can't tell what's beyond it.");
+                tell("The " + prsoo->odesc2() + " is open, but I can't tell what's\nbeyond it.");
             }
             else
             {
@@ -1664,8 +1663,8 @@ namespace room_funcs
         bool handled = false;
         if (verbq("LOOK"))
         {
-            std::string s = "You are behind the white house.  In one corner of the house there\n"
-                "is a small window which is ";
+            std::string s = "You are behind the white house.  In one corner of\n"
+            the house there is a small window which is\n";
             s += trnn(sfind_obj("WINDO"), openbit) ? "open." : "slightly ajar.";
             tell(s);
             handled = true;
@@ -3501,7 +3500,7 @@ namespace room_funcs
         {
             trz(door, openbit);
             tro(door, touchbit);
-            rv = tell("The trap door crashes shut, and you hear someone barring it.");
+            rv = tell("The trap door crashes shut, and you hear someone\nbarring it.");
         }
         return rv;
     }

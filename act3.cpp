@@ -427,7 +427,7 @@ bool through(ObjectP obj)
         }
         else
         {
-            tell("You hit your head against the " + prsoo->odesc2() + " as you attempt this feat.", 1);
+            tell("You hit your head against the " + prsoo->odesc2() + " as you\nattempt this feat.", 1);
         }
     }
     else if (obj)
