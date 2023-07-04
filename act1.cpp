@@ -1597,9 +1597,11 @@ namespace room_funcs
             jigs_up(spindizzy);
         }
         else if (verbq("LOOK"))
-        {   tell("01234567890123456789012345678901234567890123456789\n"
-            tell("You are in a circular room with passages off in\n"
-		 "eight directions.");
+        {   tell("You are in a circular room with passages off in\n"
+		      "eight directions.");
+              
+             // !! UP TO HERE !!//
+             
             if (!flags[carousel_flip])
                 tell("Your compass needle spins wildly, and you can't get your bearings.");
         }
