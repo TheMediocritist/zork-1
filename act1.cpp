@@ -655,7 +655,7 @@ bool thief_in_treasure(ObjectP hobj)
     const ObjectP &chali = sfind_obj("CHALI");
     if (length(here->robjs()) != 2)
     {
-        tell("The thief gestures mysteriously, and the treasures\n
+        tell("The thief gestures mysteriously, and the treasures\n"
 	    "in the room suddenly vanish.");
 
         for (const ObjectP &x : here->robjs())
