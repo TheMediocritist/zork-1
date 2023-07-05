@@ -18,35 +18,43 @@ bool terminal()
     return true;
 }
 
-// Output stream, supporting scripting.
 class TtyBuff : public std::basic_stringbuf<char, std::char_traits<char>>
 {
 protected:
     int sync() override
     {
         auto s = this->str();
-        if (!term_sim)
+        std::stringstream output;
+        int lineCount = 0;
+        
+        for (auto c : s)
         {
-            std::cout << s;
-        }
-        else
-        {
-            // Method for simulating output on an older terminal.
-            // Just prints one character at a time with a 10ms
-            // delay between each one.
-            for (auto c : s)
+            output << c;
+            if (c == '\n')
             {
-                using namespace std::chrono_literals;
-                std::cout << c;
-                std::cout.flush();
-                std::this_thread::sleep_for(10ms);
+                lineCount++;
+                if (lineCount % 14 == 0)
+                {
+                    std::cout << output.str();
+                    output.str("");
+                    std::cout << "-more-";
+                    std::cout.flush();
+                    std::cin.get(); // Wait for user to press any key
+                }
             }
         }
+        
+        if (!output.str().empty())
+        {
+            std::cout << output.str();
+        }
+        
         if (script_channel)
         {
             (*script_channel) << s;
             script_channel->flush();
         }
+        
         this->str("");
         return 0;
     }

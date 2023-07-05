@@ -63,9 +63,8 @@ std::string unspeakable_code()
     auto pos = oread.find_first_of('/');
     pos -= (oread[pos - 2] == '1' ? 2 : 1);
     std::stringstream ss;
-    ss << "There is an issue of US NEWS & DUNGEON REPORT dated ";
+    ss << "There is an issue of US NEWS & DUNGEON REPORT here\ndated ";
     ss << std::string_view(&oread[pos], oread.find_first_of(' ', pos) - pos);
-    ss << " here.";
     return ss.str();
 }
 

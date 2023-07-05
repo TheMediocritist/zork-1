@@ -316,8 +316,7 @@ std::optional<attack_state> blow(const AdvP &hero, ObjectP villain, const tofmsg
         tro(villain, fightbit);
         if (atrnn(hero, astaggered))
         {
-            tell("You are still recovering from that last blow, so your attack is\n"
-                "ineffective.");
+            tell("You are still recovering from that last blow, so\nyour attack is ineffective.");
             return res;
         }
         oa = att = std::max(1, fight_strength(hero));
@@ -325,7 +324,7 @@ std::optional<attack_state> blow(const AdvP &hero, ObjectP villain, const tofmsg
         {
             if (villain == sfind_obj("#####"))
             {
-                jigs_up("Well, you really did it that time.  Is suicide painless?");
+                jigs_up("Well, you really did it that time.  Is suicide\npainless?");
 				return res;
             }
             tell("Attacking the " + vdesc + " is pointless.", 1);
@@ -358,7 +357,7 @@ std::optional<attack_state> blow(const AdvP &hero, ObjectP villain, const tofmsg
     {
         if (heroq)
         {
-            tell("The unconscious " + vdesc + " cannot defend himself: He dies.");
+            tell("The unconscious " + vdesc + " cannot defend\nhimself: He dies.");
         }
         res = killed;
     }
@@ -463,8 +462,7 @@ std::optional<attack_state> blow(const AdvP &hero, ObjectP villain, const tofmsg
         if (fight_strength(hero) < 0)
         {
             hero->astrength(1 - fight_strength(hero));
-            jigs_up("It appears that that last blow was too much for you.  I'm afraid you\n"
-                "are dead.");
+            jigs_up("It appears that that last blow was too much for\nyou.  I'm afraid you are dead.");
             return res;
         }
     }
@@ -474,9 +472,10 @@ std::optional<attack_state> blow(const AdvP &hero, ObjectP villain, const tofmsg
         if (def == 0)
         {
             trz(villain, fightbit);
-            tell("Almost as soon as the " + vdesc + " breathes his last breath, a cloud\n"
-                "of sinister black fog envelops him, and when the fog lifts, the\n"
-                "carcass has disappeared.", long_tell);
+            tell("Almost as soon as the " + vdesc + " breathes\n"
+                 "his last breath, a cloud of sinister black fog\n"
+                 "envelops him, and when the fog lifts, the\n"
+                 "carcass has disappeared.", long_tell);
             remove_object(villain);
             if (random_action = villain->oaction())
             {

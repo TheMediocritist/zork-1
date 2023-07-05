@@ -1480,7 +1480,7 @@ namespace room_funcs
 		     "large reservoir.");
             }
             tell("There is a western exit, a passageway south, and a\n"
-		 "steep pathway climbing up along the edge of a cliff.", long_tell1);
+		         "steep pathway climbing up along the edge of a\ncliff.", long_tell1);
             rv = true;
         }
         return rv;
@@ -1645,7 +1645,7 @@ namespace room_funcs
             }
             else
             {
-                tell("and a large oriental rug in the center of the room.", post_crlf);
+                tell("and a large oriental rug in the center of\nthe room.", post_crlf);
             }
         }
         else if ((tc = sfind_obj("TCASE")) && (verbq("TAKE") || (verbq("PUT") && prsi() == tc)))
