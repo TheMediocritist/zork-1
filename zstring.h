@@ -2,7 +2,7 @@
 #include <array>
 #include <string>
 #include <string_view>
-constexpr std::string_view msg_string = "Muddle 105 Version/nPlease report strange occurrences.\n";
+constexpr std::string_view msg_string = "                      ZORK I\n                Muddle 105 Version\n        Please report strange occurrences.\n";
 constexpr std::array<std::string_view, 20> device_table = { "A", "AI", "D", "DM", "C", "ML", "H", "AI", "L", "AI", "M", "ML", "N", "MC", "P", "ML", "U", "MC", "Z", "ML"};
 constexpr std::string_view flushstr1 = "There appears before you a threatening figure clad\nall over in heavy black armor.  His legs seem like\nthe massive trunk of the oak tree. His broad\nshoulders and helmeted head loom high over your\nown puny frame and you realize that his powerful\narms could easily crush the very life from your\nbody.  There hangs from his belt a veritable\narsenal of deadly weapons: sword, mace, ball and\nchain, dagger, lance, and trident. He speaks with\na commanding voice:\n\n		     \"YOU SHALL NOT PASS \"\n\nAs he grabs you by the neck all grows dim about\nyou.";
 constexpr std::string_view flushstr2 = "Suddenly, a sinister, wraithlike figure appears\nbefore you, seeming to float in the air.  He glows\nwith an eldritch light.  In a barely naudible\n voice he says, \"Begone, defiler!  Your presence upsets the very\nbalance of the System itself!\"  With a sinister\nchuckle, he raises his oaken staff, taps you on\nthe head, and fades into the gloom.  In his place\nappears a tastefully lettered sign reading:\n\n			DUNGEON CLOSED\n\nAt that instant, you disappear, and all your\nbelongings clatter to the ground.\n";
