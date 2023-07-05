@@ -476,7 +476,7 @@ std::optional<attack_state> blow(const AdvP &hero, ObjectP villain, const tofmsg
             trz(villain, fightbit);
             tell("Almost as soon as the " + vdesc + " breathes\n"
                  "his last breath, a cloud of sinister black fog\n"
-                 "envelops him, and when the fog lifts, the carcass\n
+                 "envelops him, and when the fog lifts, the carcass\n"
                  "has disappeared.", long_tell);
             remove_object(villain);
             if (random_action = villain->oaction())
