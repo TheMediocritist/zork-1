@@ -67,9 +67,9 @@ const tofmsgs &knife_melee()
     {
         {
             "Your stab misses the " D " by an inch.",
-            "A good slash, but it misses the " D " by\na mile.",
-            "You charge, but the " D " jumps nimbly\naside.",
-            "A quick stroke, but the " D " is\non guard.",
+            "A good slash, but it misses the " D " by a mile.",
+            "You charge, but the " D " jumps nimbly aside.",
+            "A quick stroke, but the " D " is on guard.",
             "A good stroke, but it's too slow, the " D "\ndodges."
         },
         {
@@ -111,8 +111,8 @@ const tofmsgs &sword_melee()
     {
         {
             "Your swing misses the " D " by an inch.",
-            "A mighty blow, but it misses the " D "\nby a mile.",
-            "You charge, but the " D " jumps nimbly\naside.",
+            "A mighty blow, but it misses the " D "by\na mile.",
+            "You charge, but the " D " jumps nimbly aside.",
             "Clang! Crash! The " D " parries.",
             "A good stroke, but it's too slow, the " D "\ndodges."
         },
