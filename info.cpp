@@ -40,7 +40,7 @@ const std::string_view info_str = "                 Welcome to Zork!\n\n"
 "discards objects which he doesn't like. He may\n"
 "occasionally stop in a room you are visiting, but\n"
 "more often he just wanders through and rips you\n"
-"off (he is a skilled pickpocket).\n;
+"off (he is a skilled pickpocket).\n";
 
 const std::string_view help_str =
 {
@@ -89,7 +89,7 @@ const std::string_view help_str =
 "already have it, which process may fail if you're\n"
 "carrying too much. Although containers can contain\n"
 "other containers, the program doesn't access more\n"
-than one level down.\n\n"
+"than one level down.\n\n"
 "Fighting:\n"
 "  Occupants of the dungeon will, as a rule, fight\n"
 "back when attacked. In some cases, they may attack\n"

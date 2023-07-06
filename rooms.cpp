@@ -86,7 +86,7 @@ int score(bool ask)
     if (ask)
         princ("would be:\n    Points: ");
     else
-        princ("is:\    Points: ");
+        princ("is:\n    Points: ");
     if (eg)
         prin1(scor = eg_score);
     else
