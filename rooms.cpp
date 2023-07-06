@@ -101,7 +101,7 @@ int score(bool ask)
     else
         princ(" moves.");
     crlf();
-    princ("  Rank: ");
+    princ("    Rank: ");
     int pct = (scor * 100) / smax;
     if (eg)
     {
@@ -1148,7 +1148,7 @@ bool takefn2(bool take_)
         }
         else if (weight(aobjs) + weight(prsoo->ocontents()) + prsoo->osize() > load_max)
         {
-            tell("Your load is too heavy.  You will have to leave something behind.");
+            tell("Your load is too heavy.  You will have to leave\nsomething behind.");
             parse_cont.clear();
             return false;
         }

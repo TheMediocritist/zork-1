@@ -1596,13 +1596,12 @@ namespace room_funcs
             jigs_up(spindizzy);
         }
         else if (verbq("LOOK"))
-        {   tell("You are in a circular room with passages off in\n"
-		      "eight directions.");
+        {   tell("You are in a circular room with passages off in\neight directions.");
               
              // !! UP TO HERE !!//
              
             if (!flags[carousel_flip])
-                tell("Your compass needle spins wildly, and you can't get your bearings.");
+                tell("Your compass needle spins wildly, and you can't\nget your bearings.");
         }
         else
         {
@@ -2601,14 +2600,13 @@ namespace obj_funcs
                 snarf_object(t, a);
                 if (here == t->oroom())
                 {
-                    tell("The troll, now worried about this encounter, recovers his bloody\naxe.");
+                    tell("The troll, now worried about this encounter,\nrecovers his bloody axe.");
                 }
                 rv = true;
             }
             else if (here == t->oroom())
             {
-                rv = tell("The troll, disarmed, cowers in terror, pleading for his life in\n"
-                    "the guttural tongue of the trolls.");
+                rv = tell("The troll, disarmed, cowers in terror, pleading\nfor his life in the guttural tongue of the trolls.");
             }
         }
         else if (verbq("DEAD!"))

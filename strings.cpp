@@ -111,7 +111,7 @@ const tofmsgs &sword_melee()
     {
         {
             "Your swing misses the " D " by an inch.",
-            "A mighty blow, but it misses the " D "by\na mile.",
+            "A mighty blow, but it misses the " D " by\na mile.",
             "You charge, but the " D " jumps nimbly aside.",
             "Clang! Crash! The " D " parries.",
             "A good stroke, but it's too slow, the " D "\ndodges."
