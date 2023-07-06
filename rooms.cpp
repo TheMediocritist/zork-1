@@ -84,24 +84,24 @@ int score(bool ask)
     if (eg)
         princ("in the end game ");
     if (ask)
-        princ("would be ");
+        princ("would be:\n    Points: ");
     else
-        princ("is ");
+        princ("is:\    Points: ");
     if (eg)
         prin1(scor = eg_score);
     else
         prin1(scor = (*winner)->ascore());
 
-    princ(" [total of ");
+    princ(" out of ");
     prin1(smax = (eg ? eg_score_max : score_max()));
-    princ(" points], in ");
+    princ(" points.\n    Moves: ");
     prin1(moves);
     if (moves == 1)
         princ(" move.");
     else
         princ(" moves.");
     crlf();
-    princ("This score gives you the rank of ");
+    princ("  Rank: ");
     int pct = (scor * 100) / smax;
     if (eg)
     {
@@ -125,7 +125,7 @@ int score(bool ask)
             (pct >= 0) ? "Beginner" :
             "Incompetent");
     }
-    princ(".");
+    princ(".\n");
     crlf();
     return scor;
 }
@@ -1480,7 +1480,7 @@ bool finish(const RecOutQuit &ask)
         askq = *std::get_if<bool>(&ask);
     no_tell = 0;
     int scor = score(askq);
-    if (askq && tell("Do you wish to leave the game? (Y is affirmative): ") && yes_no() || !askq)
+    if (askq && tell("Do you wish to leave the game? (Y/N): ") && yes_no() || !askq)
     {
         record(scor, moves, deaths, ask, here);
         quit();
@@ -2019,7 +2019,7 @@ bool restart()
 {
     int scor = score(true);
     no_tell = false;
-    tell("Do you wish to restart? (Y is affirmative): ");
+    tell("Do you wish to restart? (Y/N): ");
     if (yes_no())
     {
         record(scor, moves, deaths, ". Restart.", here);
